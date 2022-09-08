@@ -1,5 +1,8 @@
 # rust-cobs
 
+![License](https://img.shields.io/github/license/honboxuan/rust-cobs?style=for-the-badge)
+![Build](https://img.shields.io/github/workflow/status/honboxuan/rust-cobs/Rust?style=for-the-badge)
+
 Simple Rust implementation of [Consistent Overhead Byte Stuffing](https://en.wikipedia.org/wiki/Consistent_Overhead_Byte_Stuffing).
 
 When decoding a stream of bytes, the `Cobs` struct stores unused bytes until a zero byte, the packet delimiter, is received. The stored bytes are then decoded. A `Vec` of successfully decoded packets are returned, or `None` if no packets are decoded. Malformed packets are discarded without warning.
